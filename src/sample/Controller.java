@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
@@ -17,7 +18,7 @@ public class Controller {
 
         if (status == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
-            Files files = new Files(selectedFile.getAbsolutePath());
+            Files files = new Files(selectedFile.getAbsolutePath(), selectedFile.getParent());
 
             filePath.setText(selectedFile.getAbsolutePath());
             fileContent.setText(files.getFileContent(selectedFile.getAbsolutePath()));
@@ -25,4 +26,6 @@ public class Controller {
             System.out.println("canceled");
         }
     }
+
+
 }

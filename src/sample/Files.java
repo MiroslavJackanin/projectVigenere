@@ -6,12 +6,18 @@ import java.util.Scanner;
 
 public class Files {
     private String path;
+    private String parent;
 
-    public Files(String path) {
+    public Files(String path, String parent) {
         this.path = path;
+        this.parent = parent;
     }
+
     public String getPath() {
         return path;
+    }
+    public String getParent() {
+        return parent;
     }
 
     public String getFileContent(String path){

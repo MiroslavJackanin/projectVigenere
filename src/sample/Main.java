@@ -18,6 +18,8 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+        Cipher cipher = new Cipher();
+        cipher.encrypt("car", "C:\\Users\\MIRO\\Desktop\\data.txt");
+        //launch(args);
     }
 }
